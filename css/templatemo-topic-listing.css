@@ -1163,3 +1163,47 @@ blockquote {
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  /* Pastikan kontainer utama bisa menyesuaikan tinggi */
+  .custom-block,
+  .custom-block-overlay {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Teks overlay agar tidak terpotong dan tetap wrap */
+  .custom-block-overlay-text {
+    overflow: visible !important;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* List agar tampil penuh dan tidak terlalu kecil */
+  ul.text-white {
+    font-size: 14px;
+    padding-left: 20px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* Heading dalam card */
+  .custom-block-overlay-text h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /* Overlay background yang sebelumnya nutupin teks */
+  .section-overlay {
+    background-color: transparent !important;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Opsional: padding tambahan kalau masih terlalu rapat */
+  .custom-block-overlay {
+    padding: 20px !important;
+  }
+}
+
